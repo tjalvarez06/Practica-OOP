@@ -1,6 +1,6 @@
 ﻿using Practica_OOP.Class;
 
-Estudiante estudiante = new Estudiante("Goku", 30, "Los mina", "Informática", "1234-5678");
+Estudiante estudiante = new Estudiante("Goku", "06/08/1993", "Los mina", "Informatica", "1234-5678");
 estudiante.InformacionEstudiante();
 
 Figura rectangulo = new Rectangulo(5, 10);
