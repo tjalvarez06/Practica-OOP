@@ -9,20 +9,25 @@ namespace Practica_OOP.Class
 {
     public class Persona
     {
-        public string nombre;
-        public int edad;
-        public string ciudad;
+    public string nombre;
+    public DateTime fechaNacimiento;
+    public string ciudad;
 
-        public Persona(string nombre, int edad, string ciudad)
-        {
-            this.nombre = nombre;
-            this.edad = edad;
-            this.ciudad = ciudad;
-        }
-
-        public void InformacionPersona()
-        {
-            Console.WriteLine($"Su nombre es {nombre}, vive en {ciudad} y tiene {edad} años de edad ");
-        }
+    public Persona(string nombre, string fechaNacimiento, string ciudad)
+    {
+        this.nombre = nombre;
+        this.fechaNacimiento = DateTime.Parse(fechaNacimiento);
+        this.ciudad = ciudad;
     }
+
+    public int CalcEdad()
+    {
+        int edad = DateTime.Now.Year - fechaNacimiento.Year;
+        return edad;
+    }
+    public void InformacionPersona()
+    {
+        Console.WriteLine($"Su nombre es {nombre}, vive en {ciudad} y tiene {CalcEdad()} años de edad ");
+    }
+}
 }
