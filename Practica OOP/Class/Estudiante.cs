@@ -12,19 +12,19 @@ namespace Practica_OOP.Class
         private string carrera;
         private string matricula;
        
-
-        public Estudiante(string nombre, int edad, string ciudad, string carrera, string matricula)
-            : base (nombre, edad, ciudad)
+    
+        public Estudiante(string nombre, string fechaNacimiento, string ciudad, string carrera, string matricula)
+            : base (nombre, fechaNacimiento, ciudad)
         {
             
             this.carrera = carrera;
             this.matricula = matricula;
           
         }
-
+    
         public void InformacionEstudiante()
         {
-            Console.WriteLine($"Su nombre es {nombre}, vive en {ciudad} y tiene {edad} años de edad ");
+            InformacionPersona();
             Console.WriteLine($"Esta estudiando la carrera {carrera} y su matricula es {matricula}");
         }
     }
